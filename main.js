@@ -26,6 +26,7 @@ const strNums2 = ["1","4","1","5","9","2","6","5","3","5","8","9","7","9","3",
 
 const strNums3 = ["1","4"];
 
+
 //chunk function
 function chunk(arr, num) {
   return _.chunk(arr, num);
@@ -41,12 +42,12 @@ function without(arr, num1, num2) {
   return _.without(arr, num1, num2);
 }
 
-//without function
+//shuffle function
 function shuffle(arr) {
   return _.shuffle(arr);
 }
 
-//without function
+//last function
 function last(arr) {
   return _.last(arr);
 }
@@ -79,7 +80,7 @@ if (typeof describe === 'function') {
   });
 
   describe('shuffle', () => {
-    it('should return an array of arrays the size of the chunk number', () => {
+    it('should return an array of randomized elements from the original array', () => {
       const array = shuffle(strNums3);
       assert.notEqual(
         ['1', '4']);
@@ -87,7 +88,7 @@ if (typeof describe === 'function') {
   });
 
   describe('last', () => {
-    it('should return an array of arrays the size of the chunk number', () => {
+    it('should return the last element in the array', () => {
       const array = last(strNums2);
       assert.equal(
         array[0], '4');
