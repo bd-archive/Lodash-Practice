@@ -24,8 +24,6 @@ const strNums2 = ["1","4","1","5","9","2","6","5","3","5","8","9","7","9","3",
 "5","5","0","5","8","2","2","3","1","7","2","5","3","5","9","4","0","8","1",
 "2","8","4","8","1","1","1","7","4","5","0","2","8","4"];
 
-const strNums3 = ["1","4"];
-
 
 //chunk function
 function chunk(arr, num) {
@@ -72,7 +70,7 @@ if (typeof describe === 'function') {
   });
 
   describe('without', () => {
-    it('should return an array of arrays the size of the chunk number', () => {
+    it('should return an array with the passed in integers removed', () => {
       const array = without(strNums, '1', '2');
       assert.equal(
         array[0], '4');
@@ -81,9 +79,9 @@ if (typeof describe === 'function') {
 
   describe('shuffle', () => {
     it('should return an array of randomized elements from the original array', () => {
-      const array = shuffle(strNums3);
+      const array = shuffle(strNums);
       assert.notEqual(
-        ['1', '4']);
+        strNums);
     });
   });
 
